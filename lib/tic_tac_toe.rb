@@ -85,13 +85,8 @@ def current_player
   turn_count.even? ? 'X' : 'O'
 end
 
-  def play
+def play
   turn until over?
-  if won?
-    puts "Congratulations #{winner}!"
-  elsif draw?
-    puts "Cat's Game!"
-  end
+  puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
 end
-
 end
